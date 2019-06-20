@@ -14,8 +14,8 @@ Extends official RabbitMQ image to compile with HiPE (High performance Erlang) e
 
 | Tag     | RabbitMQ version     | Details     | Dockerfile     |
 | :------------- | :------------- | :------------- | :------------- |
-| [spryker/rabbitmq:latest](https://hub.docker.com/r/spryker/rabbitmq/tags) | 3.7.14 | [![](https://images.microbadger.com/badges/image/spryker/rabbitmq:latest.svg)](https://microbadger.com/images/spryker/rabbitmq "Get your own image badge on microbadger.com") | [:link:](https://github.com/spryker/docker-rabbitmq/blob/master/3.7.14/Dockerfile) |
-| [spryker/rabbitmq:3.7.14](https://hub.docker.com/r/spryker/rabbitmq/tags)  | 3.7.14 | [![](https://images.microbadger.com/badges/image/spryker/rabbitmq:3.7.14.svg)](https://microbadger.com/images/spryker/rabbitmq "Get your own image badge on microbadger.com") | [:link:](https://github.com/spryker/docker-rabbitmq/blob/master/3.7.14/Dockerfile) |
+| [spryker/rabbitmq:latest](https://hub.docker.com/r/spryker/rabbitmq/tags) | 3.7.14 | [![](https://images.microbadger.com/badges/image/spryker/rabbitmq:latest.svg)](https://microbadger.com/images/spryker/rabbitmq:latest "Get your own image badge on microbadger.com") | [:link:](https://github.com/spryker/docker-rabbitmq/blob/master/3.7.14/Dockerfile) |
+| [spryker/rabbitmq:3.7.14](https://hub.docker.com/r/spryker/rabbitmq/tags)  | 3.7.14 | [![](https://images.microbadger.com/badges/image/spryker/rabbitmq:3.7.14.svg)](https://microbadger.com/images/spryker/rabbitmq:3.7.14 "Get your own image badge on microbadger.com") | [:link:](https://github.com/spryker/docker-rabbitmq/blob/master/3.7.14/Dockerfile) |
 
 ## How to use
 
