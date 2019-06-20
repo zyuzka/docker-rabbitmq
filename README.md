@@ -34,3 +34,8 @@ FROM spryker/rabbitmq:3.7.14
 broker:
     image: spryker/rabbitmq:3.7.14
 ```
+
+
+## More information
+* [RabbitMQ official images](https://github.com/docker-library/rabbitmq)
+* [RabbitMQ with High Performance Erlang](https://www.cloudamqp.com/blog/2014-03-31-rabbitmq-hipe.html)
