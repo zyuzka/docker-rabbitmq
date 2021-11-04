@@ -19,7 +19,8 @@ instances:
       Hostname: ${RABBITMQ_ENDPOINT}
       username: ${RABBITMQ_USERNAME}
       password: ${RABBITMQ_PASSWORD}
-      use_ssl: ${RABBITMQ_USE_SSL}
+      USE_SSL: ${RABBITMQ_USE_SSL:-false}
+      CA_BUNDLE_DIR: /etc/ssl/certs
       queues_regexes: ${RABBITMQ_QUEUES_REGEXES}
       exchanges_regexes: ${RABBITMQ_EXCHANGE_REGEXES}
       # queues_regexes: '["queue[0-9]+",".*"]'
@@ -47,6 +48,7 @@ instances:
       # # JSON array of regexes, entities assigned to vhosts matching a regex
       # # will be collected
       # vhosts_regexes: ARRAY_OF_HOST_REGEXE
+    interval: ${RABBITMQ_INTEGRATIONS_INTERVAL:-30}s
     labels:
       env: production
       role: rabbitmq
