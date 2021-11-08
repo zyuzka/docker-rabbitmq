@@ -21,8 +21,8 @@ instances:
       password: ${RABBITMQ_PASSWORD}
       USE_SSL: ${RABBITMQ_USE_SSL:-false}
       CA_BUNDLE_DIR: /etc/ssl/certs
-      queues_regexes: ${RABBITMQ_QUEUES_REGEXES}
-      exchanges_regexes: ${RABBITMQ_EXCHANGE_REGEXES}
+      queues_regexes: '${RABBITMQ_QUEUES_REGEXES}'
+      exchanges_regexes: '${RABBITMQ_EXCHANGE_REGEXES}'
       # queues_regexes: '["queue[0-9]+",".*"]'
       # exchanges_regexes: '["queue[0-9]+",".*"]'
       # config_path: ~/rabbitmq.conf
