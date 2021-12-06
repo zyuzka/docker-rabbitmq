@@ -24,15 +24,48 @@ jobs:
         include:
           ### Rabbitmq 3.7.14
           - image: '3.7.14/Dockerfile'
-            tags: [ "$ORGA/rabbitmq:latest", "$ORGA/rabbitmq:3.7.14" ]
+            tags: [ "$ORGA/rabbitmq:3.7.14" ]
+            platform: [ "linux/amd64" ]
 
           ### Rabbitmq 3.7.14-amqp1
           - image: '3.7.14/amqp1/Dockerfile'
             tags: [ "$ORGA/rabbitmq:3.7.14-amqp1" ]
+            platform: [ "linux/amd64" ]
 
           ### Rabbitmq 3.7.14-shovel
           - image: '3.7.14/shovel/Dockerfile'
             tags: [ "$ORGA/rabbitmq:3.7.14-shovel" ]
+            platform: [ "linux/amd64" ]
+
+          ### Rabbitmq 3.8
+          - image: '3.8/Dockerfile'
+            tags: [ "$ORGA/rabbitmq:3.8" ]
+            platform: [ "linux/amd64", "linux/arm64" ]
+
+          ### Rabbitmq 3.8-amqp1
+          - image: '3.8/amqp1/Dockerfile'
+            tags: [ "$ORGA/rabbitmq:3.8-amqp1" ]
+            platform: [ "linux/amd64", "linux/arm64" ]
+
+          ### Rabbitmq 3.8-shovel
+          - image: '3.8/shovel/Dockerfile'
+            tags: [ "$ORGA/rabbitmq:3.8-shovel" ]
+            platform: [ "linux/amd64", "linux/arm64" ]
+
+          ### Rabbitmq 3.9
+          - image: '3.9/Dockerfile'
+            tags: [ "$ORGA/rabbitmq:3.9" ]
+            platform: [ "linux/amd64", "linux/arm64" ]
+
+          ### Rabbitmq 3.9-amqp1
+          - image: '3.9/amqp1/Dockerfile'
+            tags: [ "$ORGA/rabbitmq:3.9-amqp1" ]
+            platform: [ "linux/amd64", "linux/arm64" ]
+
+          ### Rabbitmq 3.9-shovel
+          - image: '3.9/shovel/Dockerfile'
+            tags: [ "$ORGA/rabbitmq:3.9-shovel" ]
+            platform: [ "linux/amd64", "linux/arm64" ]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -46,4 +79,4 @@ jobs:
       - name: Install platform emulator collection
         run: docker run --privileged --rm tonistiigi/binfmt --install all
       - name: Build images
-        run: docker buildx build --push . --file ${{ matrix.image }} --tag ${{ join(matrix.tags, ' --tag ') }} --platform linux/amd64,linux/arm64
+        run: docker buildx build --push . --file ${{ matrix.image }} --tag ${{ join(matrix.tags, ' --tag ') }} --platform ${{ join(matrix.platform, ',') }} -build-arg "ORAGINASATION=${{ env.ORGA }}"
