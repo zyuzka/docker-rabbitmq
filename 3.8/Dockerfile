@@ -1,4 +1,4 @@
-FROM rabbitmq:3.7.14-management-alpine
+FROM rabbitmq:3.8-management-alpine
 
 ARG RABBITMQ_SERVER_CODE_PATH=/rabbitmq_hipe
 ENV RABBITMQ_SERVER_CODE_PATH ${RABBITMQ_SERVER_CODE_PATH}
