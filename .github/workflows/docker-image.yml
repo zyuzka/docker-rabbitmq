@@ -79,4 +79,4 @@ jobs:
       - name: Install platform emulator collection
         run: docker run --privileged --rm tonistiigi/binfmt --install all
       - name: Build images
-        run: docker buildx build --push . --file ${{ matrix.image }} --tag ${{ join(matrix.tags, ' --tag ') }} --platform ${{ join(matrix.platform, ',') }} -build-arg "ORAGINASATION=${{ env.ORGA }}"
+        run: docker buildx build --push . --file ${{ matrix.image }} --tag ${{ join(matrix.tags, ' --tag ') }} --platform ${{ join(matrix.platform, ',') }} --build-arg "ORAGINASATION=${{ env.ORGA }}"
