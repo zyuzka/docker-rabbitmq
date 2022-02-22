@@ -8,6 +8,8 @@ jobs:
   build-main-images:
     needs: create-tag-matrix
     runs-on: ubuntu-latest
+    env:
+      ORGA: 'zyuzka'
     strategy:
       fail-fast: false
       matrix:
@@ -43,6 +45,8 @@ jobs:
   build-child-images:
     needs: build-main-images
     runs-on: ubuntu-latest
+    env:
+      ORGA: 'zyuzka'
     strategy:
       fail-fast: false
       matrix:
